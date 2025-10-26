@@ -19,5 +19,15 @@ def student_list_operations(students, operation, *args):
     返回:
     - 操作后的学生列表
     """
+
     # 请在下方编写代码
+    if "add" == operation :
+        students.append(args[0])
+    if "remove" == operation :
+        students.remove(args[0])
+    if "update" == operation :
+        index = students.index(args[0])
+        students.remove(args[0])
+        students.insert(index,args[1])
+    return students
     pass 
