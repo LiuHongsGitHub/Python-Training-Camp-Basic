@@ -43,7 +43,8 @@ def write_file(file_path, content):
         with open(file_path,"w") as f:
             opt = f.write(content)
         return True
-    except e:
+    except Exception as e:
+        print(F"An error occurred while writing to file ：{e}")
         return False
     
     pass 
